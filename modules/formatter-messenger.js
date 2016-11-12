@@ -67,7 +67,7 @@ let formatOpenBranches= Accounts => {
 		     "webview_height_ratio": "tall",
 		     "fallback_url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg/"                    
                 }
-	    ]	    
+	    ]				      
         })
 		     
     );
@@ -76,14 +76,14 @@ let formatOpenBranches= Accounts => {
             "type": "template",
             "payload": {
                 "template_type": "list",
-                "elements": elements    
-		 "buttons": [
+                "elements": elements,
+	    	"buttons": [
 			 {
 			    "title": "View More",
 			    "type": "postback",
 			    "payload": "payload"                        
 			 }
-            	 ]    
+             	]     
             }
         }
     };
