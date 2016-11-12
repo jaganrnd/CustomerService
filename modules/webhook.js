@@ -49,9 +49,9 @@ let processText = (text, sender)  => {
          getUserInfo(sender).then(response => {         
                     sendMessage({text:
                       `Hey ${response.first_name} !
-                      "Kolapasi" welcomes you _/\_
+                      "StockMarketBot" welcomes you _/\_
                       Happy to see you :) :)
-                     Want to order food ? ?? ?? Please hit - First Menu
+                     Please hit - First Menu
                       To know about other options swipe..??`
                     }, sender);
                    salesforce.findTitleCard(match1[0]).then(Accounts => {    
