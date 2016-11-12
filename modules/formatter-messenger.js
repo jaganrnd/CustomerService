@@ -62,7 +62,7 @@ let formatOpenBranches= Accounts => {
             "buttons": [
                 {
                     "type":"web_url",
-                     "title": "View",",
+                     "title": "View",
 		     "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
 		     "messenger_extensions": true,
 		     "webview_height_ratio": "tall",
