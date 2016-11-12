@@ -49,10 +49,9 @@ let processText = (text, sender)  => {
          getUserInfo(sender).then(response => {         
                     sendMessage({text:
                       `Hey ${response.first_name} !
-                      "StockMarketBot" welcomes you _/\_
-                      Happy to see you :) :)
-                     Please hit - First Menu
-                      To know about other options swipe..??`
+                      "StockMarketBot" welcomes you !
+                       Happy to see you :) :)                     
+                       Swipe to know the services which i provide
                     }, sender);
                    salesforce.findTitleCard(match1[0]).then(Accounts => {    
                         console.log('bfo formating');
