@@ -50,7 +50,7 @@ let findTitleCard = name => {
 let findOpenBranches = parentaccountid => {
     return new Promise((resolve, reject) => {
         console.log('bfo query');
-        let q = "SELECT Id, Name,Picture_URL__c,parentid,parent.name,IsOpen__c,Description FROM Account WHERE Title_Cards__c = 'Top5'  ";
+        let q = "SELECT Id, Name,Picture_URL__c,parentid,parent.name,Description FROM Account WHERE Title_Cards__c = 'Top5'  ";
         //select id,name,parent.name from account where parent.name = 'kolapasi'   
 	console.log('open branch query' + q);        
         org.query({query: q}, (err, resp) => {
