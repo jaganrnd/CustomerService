@@ -52,11 +52,21 @@ let formatOpenBranches= Accounts => {
 	     title: Account.get("Name"),
             "image_url": Account.get("Picture_URL__c"),
 	     subtitle: Account.get("Description"),
+	    "default_action": {
+                        "type": "web_url",
+                        "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg/"
+            },
             "buttons": [
                 {
-                    "type":"postback",
-                    "title":"DELIVERY MENU",
-                    "payload": "Main_Menu," + Account.getId() + "," + Account.get("Name")
+                    "type":"web_url",
+                     "title": "View",",
+		     "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
+		     "messenger_extensions": true,
+		     "webview_height_ratio": "tall",
+		     "fallback_url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg/"
                     
                 }]
 	    
