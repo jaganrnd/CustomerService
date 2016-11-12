@@ -76,6 +76,7 @@ let formatOpenBranches= Accounts => {
             "type": "template",
             "payload": {
                 "template_type": "list",
+		"top_element_style": "compact",   
                 "elements": elements,
 	    	"buttons": [
 			 {
