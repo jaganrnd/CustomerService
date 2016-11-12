@@ -48,9 +48,9 @@ let formatOpenBranches= Accounts => {
     let elements = [];
     Accounts.forEach(Account =>
         elements.push({            
-	     "title": Account.get("Name"),
+	     title: Account.get("Name"),
             "image_url": Account.get("Picture_URL__c"),
-	    "subtitle": Account.get("Description"),
+	    subtitle: Account.get("Description"),
 	    "default_action": {
                         "type": "web_url",
                         "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
