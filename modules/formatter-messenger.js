@@ -76,7 +76,14 @@ let formatOpenBranches= Accounts => {
             "type": "template",
             "payload": {
                 "template_type": "list",
-                "elements": elements       	
+                "elements": elements    
+		 "buttons": [
+			 {
+			    "title": "View More",
+			    "type": "postback",
+			    "payload": "payload"                        
+			 }
+            	 ]    
             }
         }
     };
