@@ -48,9 +48,10 @@ let formatOpenBranches= Accounts => {
     let elements = [];
     Accounts.forEach(Account =>
         elements.push({
-            title: Account.get("Name"),
-            subtitle: Account.get("Description"),
+            
+	     title: Account.get("Name"),
             "image_url": Account.get("Picture_URL__c"),
+	     subtitle: Account.get("Description"),
             "buttons": [
                 {
                     "type":"postback",
@@ -58,13 +59,14 @@ let formatOpenBranches= Accounts => {
                     "payload": "Main_Menu," + Account.getId() + "," + Account.get("Name")
                     
                 }]
+	    
         })
     );
     return {
         "attachment": {
             "type": "template",
             "payload": {
-                "template_type": "generic",
+                "template_type": "list",
                 "elements": elements
             }
         }
