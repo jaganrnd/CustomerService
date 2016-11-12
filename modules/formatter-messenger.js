@@ -47,11 +47,10 @@ let formatQuickReplies = Accounts => {
 let formatOpenBranches= Accounts => {
     let elements = [];
     Accounts.forEach(Account =>
-        elements.push({
-            
-	     title: Account.get("Name"),
+        elements.push({            
+	     "title": Account.get("Name"),
             "image_url": Account.get("Picture_URL__c"),
-	     subtitle: Account.get("Description"),
+	    "subtitle": Account.get("Description"),
 	    "default_action": {
                         "type": "web_url",
                         "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
@@ -61,26 +60,28 @@ let formatOpenBranches= Accounts => {
             },
             "buttons": [
                 {
+	            "title": "View", 		 
                     "type":"web_url",
-                     "title": "View",
 		     "url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg",
 		     "messenger_extensions": true,
 		     "webview_height_ratio": "tall",
-		     "fallback_url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg/"
-                    
-                }]
-	    
+		     "fallback_url": "http://dailyolivian.com/wp-content/uploads/2016/10/topfive.jpg/"                    
+                }
+	    ]	    
         })
+		     
     );
     return {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "list",
-                "elements": elements
+                "elements": elements       	
             }
         }
     };
+	
+	
 };
 
 /*let formatMainMenus= MainMenus => {
